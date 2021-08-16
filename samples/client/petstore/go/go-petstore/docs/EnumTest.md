@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnumString** | Pointer to [**EnumTestEnumString**](Enum_TestEnumString.md) |  | [optional] 
-**EnumStringRequired** | [**EnumTestEnumString**](Enum_TestEnumString.md) |  | 
-**EnumInteger** | Pointer to [**EnumTestEnumInteger**](Enum_TestEnumInteger.md) |  | [optional] 
-**EnumNumber** | Pointer to [**EnumQueryDouble**](enum_query_double.md) |  | [optional] 
+**EnumString** | Pointer to [**EnumTestEnumString**](EnumTestEnumString.md) |  | [optional] 
+**EnumStringRequired** | [**EnumTestEnumString**](EnumTestEnumString.md) |  | 
+**EnumInteger** | Pointer to [**EnumTestEnumInteger**](EnumTestEnumInteger.md) |  | [optional] 
+**EnumNumber** | Pointer to [**EnumQueryDouble**](EnumQueryDouble.md) |  | [optional] 
 **OuterEnum** | Pointer to [**OuterEnum**](OuterEnum.md) |  | [optional] 
 
 ## Methods

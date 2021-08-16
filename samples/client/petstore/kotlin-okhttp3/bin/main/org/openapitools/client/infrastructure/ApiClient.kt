@@ -135,7 +135,11 @@ open class ApiClient(val baseUrl: String) {
         }
     }
 
+<<<<<<< HEAD
     protected inline fun <reified T: Any?> request(requestConfig: RequestConfig, body : Any? = null): ApiInfrastructureResponse<T?> {
+=======
+    protected inline fun <reified T: Any?> request(requestConfig: RequestConfig): ApiInfrastructureResponse<T?> {
+>>>>>>> master
         val httpUrl = HttpUrl.parse(baseUrl) ?: throw IllegalStateException("baseUrl is invalid.")
 
         // take authMethod from operation
@@ -172,12 +176,21 @@ open class ApiClient(val baseUrl: String) {
         val contentType = (headers[ContentType] as String).substringBefore(";").toLowerCase()
 
         val request = when (requestConfig.method) {
+<<<<<<< HEAD
             RequestMethod.DELETE -> Request.Builder().url(url).delete(requestBody(body, contentType))
             RequestMethod.GET -> Request.Builder().url(url)
             RequestMethod.HEAD -> Request.Builder().url(url).head()
             RequestMethod.PATCH -> Request.Builder().url(url).patch(requestBody(body, contentType))
             RequestMethod.PUT -> Request.Builder().url(url).put(requestBody(body, contentType))
             RequestMethod.POST -> Request.Builder().url(url).post(requestBody(body, contentType))
+=======
+            RequestMethod.DELETE -> Request.Builder().url(url).delete(requestBody(requestConfig.body, contentType))
+            RequestMethod.GET -> Request.Builder().url(url)
+            RequestMethod.HEAD -> Request.Builder().url(url).head()
+            RequestMethod.PATCH -> Request.Builder().url(url).patch(requestBody(requestConfig.body, contentType))
+            RequestMethod.PUT -> Request.Builder().url(url).put(requestBody(requestConfig.body, contentType))
+            RequestMethod.POST -> Request.Builder().url(url).post(requestBody(requestConfig.body, contentType))
+>>>>>>> master
             RequestMethod.OPTIONS -> Request.Builder().url(url).method("OPTIONS", null)
         }.apply {
             headers.forEach { header -> addHeader(header.key, header.value) }

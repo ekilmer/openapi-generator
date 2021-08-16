@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to [**ZebraType**](zebraType.md) |  | [optional] 
+**Type** | Pointer to [**ZebraType**](ZebraType.md) |  | [optional] 
 **ClassName** | **string** |  | 
 
 ## Methods

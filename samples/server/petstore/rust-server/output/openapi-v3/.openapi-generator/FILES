@@ -7,11 +7,16 @@ docs/AdditionalPropertiesWithList.md
 docs/AnotherXmlArray.md
 docs/AnotherXmlInner.md
 docs/AnotherXmlObject.md
+docs/AnyOfObject.md
+docs/AnyOfProperty.md
 docs/DuplicateXmlObject.md
 docs/EnumWithStarObject.md
 docs/Err.md
 docs/Error.md
+docs/InlineResponse.md
 docs/InlineResponse201.md
+docs/InlineResponse202.md
+docs/Model12345AnyOfObject.md
 docs/MyId.md
 docs/MyIdList.md
 docs/NullableTest.md

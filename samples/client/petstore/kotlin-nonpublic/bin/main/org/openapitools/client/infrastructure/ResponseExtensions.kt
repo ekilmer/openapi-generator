@@ -10,6 +10,10 @@ internal val Response.isInformational : Boolean get() = this.code in 100..199
 /**
  * Provides an extension to evaluation whether the response is a 3xx code
  */
+<<<<<<< HEAD
+=======
+@Suppress("EXTENSION_SHADOWED_BY_MEMBER")
+>>>>>>> master
 internal val Response.isRedirect : Boolean get() = this.code in 300..399
 
 /**

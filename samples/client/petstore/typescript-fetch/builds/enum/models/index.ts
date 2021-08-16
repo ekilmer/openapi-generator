@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 export * from './EnumPatternObject';
 export * from './FakeEnumRequestGetInlineResponse';
 export * from './NullableNumberEnum';

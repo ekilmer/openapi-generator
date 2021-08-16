@@ -22,5 +22,6 @@ type Pet struct {
 
 	Tags []Tag `json:"tags,omitempty"`
 
+	// Deprecated
 	Status PetStatus `json:"status,omitempty"`
 }

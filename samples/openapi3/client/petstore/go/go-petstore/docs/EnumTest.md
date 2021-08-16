@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnumString** | Pointer to [**EnumTestEnumString**](Enum_TestEnumString.md) |  | [optional] 
-**EnumStringRequired** | [**EnumTestEnumString**](Enum_TestEnumString.md) |  | 
-**EnumInteger** | Pointer to [**EnumTestEnumInteger**](Enum_TestEnumInteger.md) |  | [optional] 
-**EnumNumber** | Pointer to [**EnumQueryDouble**](enum_query_double.md) |  | [optional] 
+**EnumString** | Pointer to [**EnumTestEnumString**](EnumTestEnumString.md) |  | [optional] 
+**EnumStringRequired** | [**EnumTestEnumString**](EnumTestEnumString.md) |  | 
+**EnumInteger** | Pointer to [**EnumTestEnumInteger**](EnumTestEnumInteger.md) |  | [optional] 
+**EnumNumber** | Pointer to [**EnumQueryDouble**](EnumQueryDouble.md) |  | [optional] 
 **OuterEnum** | Pointer to [**NullableOuterEnum**](OuterEnum.md) |  | [optional] 
 **OuterEnumInteger** | Pointer to [**OuterEnumInteger**](OuterEnumInteger.md) |  | [optional] 
-**OuterEnumDefaultValue** | Pointer to [**OuterEnumDefaultValue**](OuterEnumDefaultValue.md) |  | [optional] [default to "placed"]
+**OuterEnumDefaultValue** | Pointer to [**OuterEnumDefaultValue**](OuterEnumDefaultValue.md) |  | [optional] [default to OuterEnumDefaultValue_PLACED]
 **OuterEnumIntegerDefaultValue** | Pointer to [**OuterEnumIntegerDefaultValue**](OuterEnumIntegerDefaultValue.md) |  | [optional] [default to OuterEnumIntegerDefaultValue__0]
 
 ## Methods

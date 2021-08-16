@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **HasBaleen** | Pointer to **bool** |  | [optional] 
 **HasTeeth** | Pointer to **bool** |  | [optional] 
 **ClassName** | **string** |  | 
-**Type** | Pointer to [**ZebraType**](zebraType.md) |  | [optional] 
+**Type** | Pointer to [**ZebraType**](ZebraType.md) |  | [optional] 
 
 ## Methods
 

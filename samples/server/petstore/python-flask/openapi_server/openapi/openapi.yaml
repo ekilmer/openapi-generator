@@ -595,15 +595,19 @@ components:
       properties:
         id:
           format: int64
+          title: id
           type: integer
         petId:
           format: int64
+          title: petId
           type: integer
         quantity:
           format: int32
+          title: quantity
           type: integer
         shipDate:
           format: date-time
+          title: shipDate
           type: string
         status:
           description: Order Status
@@ -611,9 +615,11 @@ components:
           - placed
           - approved
           - delivered
+          title: status
           type: string
         complete:
           default: false
+          title: complete
           type: boolean
       title: Pet Order
       type: object
@@ -627,8 +633,10 @@ components:
       properties:
         id:
           format: int64
+          title: id
           type: integer
         name:
+          title: name
           type: string
       title: Pet category
       type: object
@@ -677,8 +685,10 @@ components:
       properties:
         id:
           format: int64
+          title: id
           type: integer
         name:
+          title: name
           type: string
       title: Pet Tag
       type: object
@@ -747,10 +757,13 @@ components:
       properties:
         code:
           format: int32
+          title: code
           type: integer
         type:
+          title: type
           type: string
         message:
+          title: message
           type: string
       title: An uploaded response
       type: object

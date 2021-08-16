@@ -73,10 +73,17 @@ class ApiClient(
         baseUrl: String = defaultBasePath,
         okHttpClientBuilder: OkHttpClient.Builder? = null,
         serializerBuilder: Moshi.Builder = Serializer.moshiBuilder,
+<<<<<<< HEAD
         authName: String, 
         clientId: String, 
         secret: String, 
         username: String, 
+=======
+        authName: String,
+        clientId: String,
+        secret: String,
+        username: String,
+>>>>>>> master
         password: String
     ) : this(baseUrl, okHttpClientBuilder, serializerBuilder, arrayOf(authName)) {
         getTokenEndPoint()
@@ -175,8 +182,12 @@ class ApiClient(
     }
 
     fun <S> createService(serviceClass: Class<S>): S {
+<<<<<<< HEAD
         var usedClient: OkHttpClient? = null
         this.okHttpClient?.let { usedClient = it } ?: run {usedClient = clientBuilder.build()}
+=======
+        val usedClient = this.okHttpClient ?: clientBuilder.build()
+>>>>>>> master
         return retrofitBuilder.client(usedClient).build().create(serviceClass)
     }
 
@@ -195,10 +206,18 @@ class ApiClient(
         }
     }
 
+<<<<<<< HEAD
     companion object {        
+=======
+    companion object {
+>>>>>>> master
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty("org.openapitools.client.baseUrl", "http://petstore.swagger.io/v2")
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

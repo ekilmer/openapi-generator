@@ -30,6 +30,7 @@ import io.swagger.v3.oas.models.parameters.RequestBody;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
 import org.openapitools.codegen.utils.StringUtils;
+import org.openapitools.codegen.utils.ModelUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +53,7 @@ public class InlineModelResolver {
         structureMapper.writer(new DefaultPrettyPrinter());
     }
 
-    static final Logger LOGGER = LoggerFactory.getLogger(InlineModelResolver.class);
+    final Logger LOGGER = LoggerFactory.getLogger(InlineModelResolver.class);
 
     void flatten(OpenAPI openapi) {
         this.openapi = openapi;
@@ -104,7 +105,7 @@ public class InlineModelResolver {
     }
 
     /**
-     * Return false if model can be represented by primitives e.g. string, object 
+     * Return false if model can be represented by primitives e.g. string, object
      * without properties, array or map of other model (model contanier), etc.
      *
      * Return true if a model should be generated e.g. object with properties,
@@ -451,8 +452,8 @@ public class InlineModelResolver {
      */
     private String sanitizeName(final String name) {
         return name
-                .replaceAll("^[0-9]", "_") // e.g. 12object => _2object
-                .replaceAll("[^A-Za-z0-9]", "_"); // e.g. io.schema.User name => io_schema_User_name
+            .replaceAll("^[0-9]", "_$0") // e.g. 12object => _12object
+            .replaceAll("[^A-Za-z0-9]", "_"); // e.g. io.schema.User name => io_schema_User_name
     }
 
     private String uniqueName(final String name) {

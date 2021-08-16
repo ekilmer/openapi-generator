@@ -98,7 +98,8 @@ paths:
       description: Multiple status values can be provided with comma separated strings
       operationId: findPetsByStatus
       parameters:
-      - description: Status values that need to be considered for filter
+      - deprecated: true
+        description: Status values that need to be considered for filter
         explode: false
         in: query
         name: status
@@ -1126,6 +1127,13 @@ components:
     UserArray:
       content:
         application/json:
+          examples:
+            simple-list:
+              description: Should not get into code examples
+              summary: Simple list example
+              value:
+              - username: foo
+              - username: bar
           schema:
             items:
               $ref: '#/components/schemas/User'
@@ -1521,6 +1529,11 @@ components:
           - -1
           format: int32
           type: integer
+        enum_integer_only:
+          enum:
+          - 2
+          - -2
+          type: integer
         enum_number:
           enum:
           - 1.1
@@ -1789,6 +1802,8 @@ components:
         $special[property.name]:
           format: int64
           type: integer
+        _special_model.name_:
+          type: string
       xml:
         name: $special[model.name]
     HealthCheckResult:
@@ -2086,6 +2101,27 @@ components:
       example: 2010-01-01T10:10:10.000111+01:00
       format: date-time
       type: string
+    DeprecatedObject:
+      deprecated: true
+      properties:
+        name:
+          type: string
+      type: object
+    ObjectWithDeprecatedFields:
+      properties:
+        uuid:
+          type: string
+        id:
+          deprecated: true
+          type: number
+        deprecatedRef:
+          $ref: '#/components/schemas/DeprecatedObject'
+        bars:
+          deprecated: true
+          items:
+            $ref: '#/components/schemas/Bar'
+          type: array
+      type: object
     InlineResponseDefault:
       example:
         string:

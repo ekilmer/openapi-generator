@@ -18,7 +18,11 @@ interface PetApi {
      *  - 405: Invalid input
      * 
      * @param body Pet object that needs to be added to the store 
+<<<<<<< HEAD
     * @return [Call]<[Unit]>
+=======
+     * @return [Call]<[Unit]>
+>>>>>>> master
      */
     @POST("pet")
     fun addPet(@Body body: Pet): Call<Unit>
@@ -31,7 +35,11 @@ interface PetApi {
      * 
      * @param petId Pet id to delete 
      * @param apiKey  (optional)
+<<<<<<< HEAD
     * @return [Call]<[Unit]>
+=======
+     * @return [Call]<[Unit]>
+>>>>>>> master
      */
     @DELETE("pet/{petId}")
     fun deletePet(@Path("petId") petId: kotlin.Long, @Header("api_key") apiKey: kotlin.String): Call<Unit>
@@ -44,7 +52,11 @@ interface PetApi {
      *  - 400: Invalid status value
      * 
      * @param status Status values that need to be considered for filter 
+<<<<<<< HEAD
     * @return [Call]<[kotlin.collections.List<Pet>]>
+=======
+     * @return [Call]<[kotlin.collections.List<Pet>]>
+>>>>>>> master
      */
     @GET("pet/findByStatus")
     fun findPetsByStatus(@Query("status") status: CSVParams): Call<kotlin.collections.List<Pet>>
@@ -57,7 +69,11 @@ interface PetApi {
      *  - 400: Invalid tag value
      * 
      * @param tags Tags to filter by 
+<<<<<<< HEAD
     * @return [Call]<[kotlin.collections.List<Pet>]>
+=======
+     * @return [Call]<[kotlin.collections.List<Pet>]>
+>>>>>>> master
      */
     @Deprecated("This api was deprecated")
     @GET("pet/findByTags")
@@ -72,7 +88,11 @@ interface PetApi {
      *  - 404: Pet not found
      * 
      * @param petId ID of pet to return 
+<<<<<<< HEAD
     * @return [Call]<[Pet]>
+=======
+     * @return [Call]<[Pet]>
+>>>>>>> master
      */
     @GET("pet/{petId}")
     fun getPetById(@Path("petId") petId: kotlin.Long): Call<Pet>
@@ -86,7 +106,11 @@ interface PetApi {
      *  - 405: Validation exception
      * 
      * @param body Pet object that needs to be added to the store 
+<<<<<<< HEAD
     * @return [Call]<[Unit]>
+=======
+     * @return [Call]<[Unit]>
+>>>>>>> master
      */
     @PUT("pet")
     fun updatePet(@Body body: Pet): Call<Unit>
@@ -100,7 +124,11 @@ interface PetApi {
      * @param petId ID of pet that needs to be updated 
      * @param name Updated name of the pet (optional)
      * @param status Updated status of the pet (optional)
+<<<<<<< HEAD
     * @return [Call]<[Unit]>
+=======
+     * @return [Call]<[Unit]>
+>>>>>>> master
      */
     @FormUrlEncoded
     @POST("pet/{petId}")
@@ -115,7 +143,11 @@ interface PetApi {
      * @param petId ID of pet to update 
      * @param additionalMetadata Additional data to pass to server (optional)
      * @param file file to upload (optional)
+<<<<<<< HEAD
     * @return [Call]<[ApiResponse]>
+=======
+     * @return [Call]<[ApiResponse]>
+>>>>>>> master
      */
     @Multipart
     @POST("pet/{petId}/uploadImage")

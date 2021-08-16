@@ -9,9 +9,9 @@
 
 package petstoreserver
 
-type statusItems string
+type StatusItems string
 
-// List of statusItems
+// List of StatusItems
 const (
 	AVAILABLE StatusItems = "available"
 	PENDING StatusItems = "pending"

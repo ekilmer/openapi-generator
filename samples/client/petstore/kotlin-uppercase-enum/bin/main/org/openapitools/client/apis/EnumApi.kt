@@ -44,6 +44,7 @@ class EnumApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun getEnum() : PetEnum {
+<<<<<<< HEAD
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -56,6 +57,12 @@ class EnumApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
         val localVarResponse = request<PetEnum>(
             localVariableConfig,
             localVariableBody
+=======
+        val localVariableConfig = getEnumRequestConfig()
+
+        val localVarResponse = request<PetEnum>(
+            localVariableConfig
+>>>>>>> master
         )
 
         return when (localVarResponse.responseType) {
@@ -73,4 +80,28 @@ class EnumApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
         }
     }
 
+<<<<<<< HEAD
+=======
+    /**
+    * To obtain the request config of the operation getEnum
+    *
+    * @return RequestConfig
+    */
+    fun getEnumRequestConfig() : RequestConfig {
+        val localVariableBody: kotlin.Any? = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        val localVariableConfig = RequestConfig(
+            method = RequestMethod.GET,
+            path = "/enum",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+
+        return localVariableConfig
+    }
+
+>>>>>>> master
 }

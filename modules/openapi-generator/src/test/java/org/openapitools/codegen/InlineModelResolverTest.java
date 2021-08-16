@@ -911,6 +911,7 @@ public class InlineModelResolverTest {
         assertTrue(openAPI.getComponents().getSchemas().get("ArbitraryObjectModelWithArrayInlineWithTitle") instanceof ArraySchema);
 
         ArraySchema schema = (ArraySchema) openAPI.getComponents().getSchemas().get("ArbitraryObjectModelWithArrayInlineWithTitle");
+        assertTrue(schema.getItems() instanceof ObjectSchema);
 
         Schema itemsRef = schema.getItems();
         assertNotNull(itemsRef);
